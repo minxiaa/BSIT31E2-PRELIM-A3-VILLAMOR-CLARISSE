@@ -24,10 +24,28 @@ namespace HTTP_Server.Controllers
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
                 Date = DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-                TemperatureC = Random.Shared.Next(-20, 55),
+                TemperatureC = Random.Shared.Next(-20,55),
                 Summary = Summaries[Random.Shared.Next(Summaries.Length)]
             })
-            .ToArray();
+             .ToArray();
+        }
+
+        [HttpPost("(id)")]
+        public IActionResult Post(int id)
+        {
+            return Ok();
+        }
+
+        [HttpPut("(id)")]
+        public IActionResult Put(int id)
+        {
+            return Ok();
+        }
+
+        [HttpDelete("(id)")]
+        public IActionResult Delete(int id)
+        {
+            return Ok();
         }
     }
 }
