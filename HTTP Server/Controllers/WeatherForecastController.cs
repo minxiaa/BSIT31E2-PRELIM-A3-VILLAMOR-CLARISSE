@@ -17,7 +17,7 @@ namespace HTTP_Server.Controllers
         {
             _logger = logger;
         }
-
+        //retrieves weather forecast
         [HttpGet(Name = "GetWeatherForecast")]
         public IEnumerable<WeatherForecast> Get()
         {
@@ -29,19 +29,19 @@ namespace HTTP_Server.Controllers
             })
              .ToArray();
         }
-
+        //creates weather forecast
         [HttpPost("(id)")]
         public IActionResult Post(int id)
         {
             return Ok();
         }
-
+        //updates weather forecast
         [HttpPut("(id)")]
         public IActionResult Put(int id)
         {
             return Ok();
         }
-
+        //deletes weather forecast
         [HttpDelete("(id)")]
         public IActionResult Delete(int id)
         {

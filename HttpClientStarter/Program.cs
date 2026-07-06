@@ -13,22 +13,24 @@ Console.WriteLine("Choose an Option: \nA. Get \nB. Post \nC. Put\nD. Delete");
 
 string answer = Console.ReadLine();
 
+//Gets the information from API
+
 if (answer == "A")
 {
     response = await client.GetAsync("https://localhost:7116/weatherforecast");
    
-    
+//Creates a new resource
 }
 else if (answer == "B")
 {
     response = await client.PostAsync("https://localhost:7116/weatherforecast", requestBody);
-    
+ //updates the resource
 }
 else if (answer == "C")
 {
-    response = await client.PutAsync("https://localhost:7116/weatherforecast", requestBody);
+    response = await client.PutAsync("https://localhost:7116/weatherforecast/1", requestBody);
 
-    
+//Deletes the resource  
 }
 else if (answer == "D")
 {

@@ -1,5 +1,6 @@
 namespace HTTP_Server
 {
+    //Defines information and data type
     public class WeatherForecast
     {
         public DateOnly Date { get; set; }
